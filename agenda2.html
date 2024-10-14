@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="assets/css/main.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>agenda2</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    width: 800px;
+    margin: 0 auto;
+  }
+  .calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+  .calendar-cell {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Cronograma de Citas</h2>
+  <div>
+    <button onclick="agregarFecha()">Agregar Fecha de cita</button>
+  </div>
+  <div class="calendar" id="calendar"></div>
+</div>
+<footer class="page-footer indigo darken-4">
+  <div class="container">
+      <div class="row">
+          <div class="col l6 s12">
+              <h3 class="white-text">Mapa de Navegación</h3>
+              <ul>
+                  <li><a class="grey-text text-lighten-3" href="agenda2.html">Agenda de Citas</a></li>
+                  <li><a class="grey-text text-lighten-3" href="llamadas.html">Llamadas</a></li>
+                  <li><a class="grey-text text-lighten-3" href="usuario.html">Clientes</a></li>
+                  <li><a class="grey-text text-lighten-3" href="Vehiculos.html">Vehículos</a></li>
+                  <li><a class="grey-text text-lighten-3" href="index2.html">Inicio</a></li>
+                  <li><a class="grey-text text-lighten-3" href="login3.html">Login</a></li>
+              </ul>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h3 class="white-text">Redes Sociales</h3>
+            <ul class="icons">
+                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+                <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+        </div>
+      </div>
+  </div>
+  <div class="footer-copyright">
+      <div class="container">
+          © 2024 Todos los derechos reservados, Compañía CDA
+      </div>
+  </div>
+</footer>
+
+<script>
+  function agregarFecha() {
+    var cedula = prompt("Por favor, ingrese su cédula:");
+    var placa = prompt("Por favor, ingrese su placa:");
+    
+    if (cedula && placa) {
+      var dateInput = prompt("Por favor, ingrese la fecha de agendamiento (YYYY-MM-DD):");
+      if (dateInput) {
+        var date = new Date(dateInput);
+        var day = date.getDate();
+        var month = date.getMonth();
+        var year = date.getFullYear();
+        var dayOfWeek = date.getDay();
+        var dayNames = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
+
+        var calendar = document.getElementById("calendar");
+
+        var cell = document.createElement("div");
+        cell.classList.add("calendar-cell");
+        cell.textContent = dayNames[dayOfWeek] + " " + day + "/" + (month + 1) + "/" + year + " - Cédula: " + cedula + ", Placa: " + placa;
+        
+        // Insertar de manera ordenada por fecha
+        var cells = calendar.querySelectorAll('.calendar-cell');
+        var insertIndex = 0;
+        for (var i = 0; i < cells.length; i++) {
+          var cellDate = new Date(cells[i].textContent.split(" ").slice(1, 4).join(" "));
+          if (date > cellDate) {
+            insertIndex = i + 1;
+          } else {
+            break;
+          }
+        }
+        calendar.insertBefore(cell, cells[insertIndex]);
+
+        // Agregar botón de eliminación
+        var deleteButton = document.createElement("button");
+        deleteButton.textContent = "Eliminar";
+        deleteButton.onclick = function() {
+          calendar.removeChild(cell);
+        };
+        cell.appendChild(deleteButton);
+      } else {
+        alert("Debe ingresar una fecha válida.");
+      }
+    } else {
+      alert("Debe ingresar la cédula y la placa.");
+    }
+  }
+  
+</script>
+
+</body>
+</html>

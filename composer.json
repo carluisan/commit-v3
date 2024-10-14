@@ -1,0 +1,11 @@
+{
+    "name": "samsung/definitivo",
+    "autoload": {
+        "psr-4": {
+            "Samsung\\Definitivo\\": "src/"
+        }
+    },
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}

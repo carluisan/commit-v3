@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>crear vehiculo</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<html>
+  <body><!-- ENCABEZADO -->
+    <header>
+    <!-- CARGA DE LOGO CDA -->
+    <nav class="nav-wrapper">
+        <div class="nav-wrapper indigo text darken-4">
+          <img class="responsive-img" src="images/Foto Luisca2.jpg" class="materialboxed responsive-img" alt="">
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med">
+            <div 
+            class="col s12 m12"><a href="#" class="brand-logo center">CREAR VEHICULOS</a>
+            </div>
+            <li><a href="index2.html">Inicio</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Acerca de</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+    </nav>
+    </header>
+<!-- CONTENIDO PRINCIPAL->FORMULARIO -->
+<div class="container">
+    <!--<h2 class="center-align">Formulario de Registro de Vehículo</h2>-->
+    <h2>Registrar Nuevo Vehículo</h2>
+    <form action="crear_vehiculo.php" method="post">
+        <div class="row">
+            <div class="input-field col s6 m6">
+                <label for="id_vehiculo_placa">ID del Vehículo (Placa):</label>
+                <input type="text" id="id_vehiculo_placa" name="id_vehiculo_placa" required><br>
+            </div>
+        
+            <div class="input-field col s6 m6">
+                <label for="id_usuario">ID del Usuario:</label>
+                <input type="text" id="id_usuario" name="id_usuario" required><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6 m6">
+                <label for="vin">VIN:</label>
+                <input type="text" id="vin" name="vin" required><br>
+            </div>
+        
+            <div class="input-field col s6 m6">
+                <label for="no_motor">Número de Motor:</label>
+                <input type="text" id="no_motor" name="no_motor" required><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6 m6">
+                <label for="marca">Marca:</label>
+                <input type="text" id="marca" name="marca" required><br>
+            </div>
+        
+            <div class="input-field col s6 m6">
+                <label for="modelo">Modelo:</label>
+                <input type="number" id="modelo" name="modelo" required><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12 m12">
+                <label for="soat">SOAT:</label>
+                <input type="text" id="soat" name="soat" required><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6 m6">
+                <input type="date" id="fecha_matricula" name="fecha_matricula" required>
+                <label for="fecha_matricula" class="active">Fecha Matrícula:</label>
+            </div>
+            <div class="input-field col s6 m6">
+                <input type="date" id="fecha_rev_RTM" name="fecha_rev_RTM" required>
+                <label for="fecha_rev_RTM" class="active">Fecha de RTM:</label>
+            </div>
+            
+        </div>      
+        <input type="submit" value="Registrar Vehículo">
+    </form>
+    <div class="row">
+        <form method="get" action="">
+            <button type="submit" name="clear" value="true">Borrar Pantalla</button>
+            <a href="index_vehiculo.php" class="btn">Volver a la página principal</a>
+        </form>
+    </div>    
+</div>
+<p></p>
+</body>
+<body>
+<!-- FOOTER O PIE DE PAGINA -->
+<footer class="page-footer indigo darken-4">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h3 class="white-text">Mapa de Navegación</h3>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="agenda2.html">Agenda de Citas</a></li>
+                    <li><a class="grey-text text-lighten-3" href="llamadas.html">Llamadas</a></li>
+                    <li><a class="grey-text text-lighten-3" href="usuario.html">Clientes</a></li>
+                    <li><a class="grey-text text-lighten-3" href="Vehiculos.html">Vehículos</a></li>
+                    <li><a class="grey-text text-lighten-3" href="index2.html">Inicio</a></li>
+                    <li><a class="grey-text text-lighten-3" href="login3.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h3 class="white-text">Redes Sociales</h3>
+              <ul class="icons">
+                  <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                  <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                  <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                  <li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+                  <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+              </ul>
+          </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2024 Todos los derechos reservados, Compañía CDA
+        </div>
+    </div>
+</footer>
+<!-- IMPORTACION DE MATERIALIZE JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems);
+    });
+    <!-- Compiled and minified JavaScript -->
+    src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"
+    src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" 
+</script>
+<script src="forind.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<!-- Compiled and minified CSS 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">-->
+</body>
+</html>

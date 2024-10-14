@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>usuario</title>
+<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<html>
+  <body>
+<!-- ENCABEZADO -->
+
+    <header>
+    <!-- CARGA DE LOGO CDA -->
+      <nav class="nav-wrapper">
+        <div class="nav-wrapper indigo text darken-4">
+          <img class="responsive-img" src="images/Foto Luisca2.jpg" class="materialboxed responsive-img" alt="">
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med">
+            <div 
+            class="col s12 m12"><a href="#" class="brand-logo center">REGISTRO DE USUARIOS</a>
+            </div>
+            <li><a href="index2.html">Inicio</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Acerca de</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+<!-- CONTENIDO PRINCIPAL->FORMULARIO -->
+  <div class="container">
+        <!--<h2 class="center-align">Formulario de Registro de Vehículo</h2>-->
+        <form action="/submit_formulario" method="post">
+        <div class="row">
+            <div class="input-field col s6 m6">
+              <input id="id_usuario" type="text" class="validate" required>
+              <label for="id_usuario">Cedula</label>
+            </div>
+        
+            <div class="input-field col s6 m6">
+              <input id="nombre" type="text" class="validate" required>
+              <label for="nombre">Nombre</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6 m6">
+              <input id="Apellido" type="text" class="validate" required>
+              <label for="Apellido">Apellido</label>
+            </div>
+            <div class="input-field col s6 m6">
+              <input id="Ciudad" type="text" class="validate" required>
+              <label for="Ciudad">Ciudad</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6 m6">
+              <input id="Direccion" type="text" class="validate" required>
+              <label for="Direccion">Direccion</label>
+            </div>
+            <div class="input-field col s6 m6">
+              <input id="Telefono" type="text" class="validate" required>
+              <label for="Telefono">Celular</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6 m6">
+              <input id="Email" type="text" class="validate" required>
+              <label for="Email">email</label>
+            </div>
+            <div class="input-field col s6 m6">
+              <input id="fecha_nacimiento" type="date" class="validate" required>
+              <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6 m6">
+              <input id="fecha_expedicion" type="date" class="validate" required>
+              <label for="fecha_expedicion">Fecha de expedición cedula</label>
+            </div>
+            <div class="input-field col s6 m6">
+              
+             <n1 label for="seleccionusuario">Tipo de usuario:</label></n1>
+              <select id="opciones">
+              <option value="opcion1">Administrador</option>
+              <option value="opcion2">Cliente</option>
+              <option value="opcion3">Vendedor</option>
+              </select>
+            </div>
+        </div>
+        </form>
+  </div>
+  <div class="container">
+      <form action="#">
+          <p>
+              <label>
+                  <input name="group1" type="radio" checked />
+                  <span>Crear</span>
+              </label>
+          </p>
+          <p>
+              <label>
+                  <input name="group1" type="radio" />
+                  <span>Leer</span>
+              </label>
+          </p>
+          <p>
+              <label>
+                  <input name="group1" type="radio" />
+                  <span>Actualizar</span>
+              </label>
+          </p>
+          <p>
+            <label>
+                <input name="group1" type="radio" />
+                <span>Borrar</span>
+            </label>
+        </p>
+        <a class="waves indigo darken-4 waves-light btn-large">ENVIAR</a>
+      </form>
+  </div>
+  <p></p>
+</body>
+</html>
+  
+  <!-- FOOTER O PIE DE PAGINA -->
+    <footer class="page-footer indigo darken-4">
+      <div class="container">
+          <div class="row">
+              <div class="col l6 s12">
+                  <h3 class="white-text">Mapa de Navegación</h3>
+                  <ul>
+                      <li><a class="grey-text text-lighten-3" href="agenda2.html">Agenda de Citas</a></li>
+                      <li><a class="grey-text text-lighten-3" href="llamadas.html">Llamadas</a></li>
+                      <li><a class="grey-text text-lighten-3" href="usuario.html">Clientes</a></li>
+                      <li><a class="grey-text text-lighten-3" href="Vehiculos.html">Vehículos</a></li>
+                      <li><a class="grey-text text-lighten-3" href="index2.html">Inicio</a></li>
+                      <li><a class="grey-text text-lighten-3" href="login3.html">Login</a></li>
+                  </ul>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h3 class="white-text">Redes Sociales</h3>
+                <ul class="icons">
+                    <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                    <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                    <li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+                    <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+                </ul>
+            </div>
+          </div>
+      </div>
+      <div class="footer-copyright">
+          <div class="container">
+              © 2024 Todos los derechos reservados, Compañía CDA
+          </div>
+      </div>
+  </footer>
+
+  <!-- IMPORTACION DE MATERIALIZE JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('.sidenav');
+          var instances = M.Sidenav.init(elems);
+      });
+      <!-- Compiled and minified JavaScript -->
+      src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"
+      src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" 
+  </script>
+  <script src="forind.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
